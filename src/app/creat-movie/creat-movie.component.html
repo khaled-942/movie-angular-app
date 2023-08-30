@@ -1,1 +1,21 @@
-<p>creat-movie works!</p>
+<div class="container p-5">
+  <form #moviesForm="ngForm" (ngSubmit)="submitMovie(moviesForm.value)">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Movie Name</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" #movieName="ngModel"
+        ngModel name="movieName" required>
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Movie Name</label>
+      <input type="text" class="form-control" id="pass" aria-describedby="pass" #moviePass="ngModel"
+        ngModel name="pass" required>
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+<div *ngIf="movieName.touched">
+    <small class="text-danger" *ngIf="movieName.errors?.['required']">ghh</small>
+</div>
+{{moviesForm.value| json}}

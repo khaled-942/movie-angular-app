@@ -6,9 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./creat-movie.component.scss']
 })
 export class CreatMovieComponent implements OnInit {
-
   constructor() { }
-
+  model:any
+  submitMovie(values:any){
+    console.log(values)
+  }
   ngOnInit(): void {
   }
 
