@@ -6,17 +6,30 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { MovieListComponent } from './movie-list/movie-list.component';
+import { MovieCardComponent } from './movie-card/movie-card.component';
+import { NgbDatepickerModule, NgbTimepickerModule } from '@ng-bootstrap/ng-bootstrap';
+import { AbouUsComponent } from './abou-us/abou-us.component';
+import { CreatMovieComponent } from './creat-movie/creat-movie.component';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    MovieListComponent,
+    MovieCardComponent,
+    AbouUsComponent,
+    CreatMovieComponent,
+    MovieDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbTimepickerModule,
+    NgbDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
