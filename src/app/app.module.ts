@@ -8,10 +8,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
-import { NgbDatepickerModule, NgbTimepickerModule } from '@ng-bootstrap/ng-bootstrap';
 import { AbouUsComponent } from './abou-us/abou-us.component';
 import { CreatMovieComponent } from './creat-movie/creat-movie.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { CurrencyPipe } from './currency.pipe';
 
 @NgModule({
   declarations: [
@@ -22,14 +22,13 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
     MovieCardComponent,
     AbouUsComponent,
     CreatMovieComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    CurrencyPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    NgbTimepickerModule,
-    NgbDatepickerModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
