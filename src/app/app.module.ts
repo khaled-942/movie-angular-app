@@ -12,6 +12,7 @@ import { AbouUsComponent } from './abou-us/abou-us.component';
 import { CreatMovieComponent } from './creat-movie/creat-movie.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { CurrencyPipe } from './currency.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { CurrencyPipe } from './currency.pipe';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

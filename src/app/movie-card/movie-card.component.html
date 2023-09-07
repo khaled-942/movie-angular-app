@@ -1,5 +1,5 @@
 <div class="card h-100">
-    <img [src]="movieItem.poster_path" class="card-img-top img-fluid">
+    <img [src]="'https://images.tmdb.org/t/p/original'+movieItem.poster_path" class="card-img-top img-fluid" *ngIf="movieItem.poster_path">
     <div class="card-body">
         <h5 class="card-title">{{movieItem.title | uppercase}}</h5>
         <p class="card-text">{{movieItem.overview}}</p>
