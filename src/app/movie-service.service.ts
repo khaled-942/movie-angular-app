@@ -9,6 +9,9 @@ export class MovieServiceService {
 
   constructor(private http : HttpClient) { }
   getMovies(){
-    return this.http.get(`${environment.baseUrl}discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_release_type=2|3&page=1&sort_by=primary_release_date.desc&api_key=${environment.api_key}`)
+    return this.http.get(`https://api.themoviedb.org/3/movie/popular?language=en-US&page=1&sort_by=vote_average.desc&api_key=${environment.api_key}`)
+  }
+  getMoviesByPages(num:number){
+    return this.http.get(`https://api.themoviedb.org/3/movie/popular?language=en-US&page=${num}&sort_by=vote_average.desc&api_key=${environment.api_key}`)
   }
 }

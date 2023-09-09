@@ -1,8 +1,19 @@
 <div class="container p-5">
-    <button class="btn btn-success" (click)="redirect()">change Location to about</button>
+    <!-- <button class="btn btn-success" (click)="redirect()">change Location to about</button> -->
     <div class="row row-cols-1 row-cols-md-4` g-4">
         <div class="col-3" *ngFor="let movie of moviesList">
             <app-movie-card [movieItem]="movie" (sendMovie)="reciveMovie($event)"></app-movie-card>
         </div>
+    </div>
+    <div class="w-100 d-flex justify-content-center py-4">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <!-- <li class="page-item pointer"><a class="page-link" (click)="backPage()">Previous</a></li> -->
+                <li class="page-item pointer"><a class="page-link"(click)="pagination(1)">1</a></li>
+                <li class="page-item pointer"><a class="page-link"(click)="pagination(2)">2</a></li>
+                <li class="page-item pointer"><a class="page-link"(click)="pagination(3)">3</a></li>
+                <!-- <li class="page-item pointer"><a class="page-link" (click)="nextPage()">Next</a></li> -->
+            </ul>
+        </nav>
     </div>
 </div>
